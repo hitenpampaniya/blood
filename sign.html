@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 200px;
+      background: #b71c1c;
+      color: white;
+      padding: 20px;
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+    .sidebar a:hover {
+      background: #d32f2f;
+    }
+    .main {
+      flex: 1;
+      padding: 20px;
+      background: #fff3f3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <h3>Menu</h3>
+  <a href="#" onclick="showContent('profile')">👤 Profile</a>
+  <a href="#" onclick="showContent('password')">🔒 Change Password</a>
+  <a href="#" onclick="logout()">🚪 Logout</a>
+</div>
+
+<div class="main">
+  <h2 id="welcome"></h2>
+  <div id="content">
+    <p>Welcome to your blood donation dashboard. Use the menu to view profile or change password.</p>
+  </div>
+</div>
+
+<script>
+  const user = localStorage.getItem("bloodUser");
+  document.getElementById("welcome").innerText = "Welcome, " + user + "!";
+
+  function showContent(section) {
+    if (section === "profile") {
+      document.getElementById("content").innerHTML = "<h3>Your Profile</h3><p>Name: " + user + "<br>Email: user@example.com</p>";
+    } else if (section === "password") {
+      document.getElementById("content").innerHTML = `
+        <h3>Change Password</h3>
+        <input type="password" placeholder="Old Password" /><br><br>
+        <input type="password" placeholder="New Password" /><br><br>
+        <button onclick="alert('Password Changed!')">Change</button>
+      `;
+    }
+  }
+
+  function logout() {
+    localStorage.removeItem("bloodUser");
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 600px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .form-group {
+      flex: 1 1 45%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    .checkbox {
+      flex-basis: 100%;
+      margin: 10px 0;
+    }
+
+    .checkbox label {
+      font-size: 14px;
+    }
+
+    .btn-submit {
+      flex-basis: 100%;
+      text-align: center;
+    }
+
+    .btn-submit button {
+      background: #00aee3;
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .or {
+      margin: 20px 0;
+      text-align: center;
+      color: #999;
+      position: relative;
+    }
+
+    .or::before,
+    .or::after {
+      content: "";
+      height: 1px;
+      width: 40%;
+      background: #ccc;
+      position: absolute;
+      top: 50%;
+    }
+
+    .or::before {
+      left: 0;
+    }
+
+    .or::after {
+      right: 0;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .login-link a {
+      color: #00aee3;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .form-group {
+        flex: 1 1 100%;
+      }
+
+      .container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form>
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" placeholder="Enter your First Name">
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" placeholder="Enter your Last Name">
+      </div>
+      <div class="form-group">
+        <label>Gender</label>
+        <select>
+          <option>Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Blood Group</label>
+        <select>
+          <option>Select Blood Group</option>
+          <option>A+</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B-</option>
+          <option>O+</option>
+          <option>O-</option>
+          <option>AB+</option>
+          <option>AB-</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label>Contact No</label>
+        <input type="text" placeholder="Enter your Contact No">
+      </div>
+      <div class="form-group">
+        <label>State</label>
+        <input type="text" placeholder="Enter your State">
+      </div>
+      <div class="form-group">
+        <label>City</label>
+        <input type="text" placeholder="Enter your City">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" placeholder="Enter your Password">
+      </div>
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Enter your Confirm Password">
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox"> I agree the terms and policy</label>
+      </div>
+      <div class="btn-submit">
+        <button type="submit">Sign up</button>
+      </div>
+    </form>
+    <div class="or">Or Sign up with</div>
+    <div class="login-link">
+      Already a member? <a href="userlogin.html">Login here</a>
+    </div>
+  </div>
+
+</body>
+</html>
